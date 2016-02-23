@@ -49,4 +49,12 @@ describe('reducer', () => {
     }));
   });
 
+  it('has an inital state', () => {
+    const action = {type: 'SET_ENTRIES', entries: ['Trainspotting']};
+    const nextState = reducer(undefined, action);
+    expect(nextState).to.equal(fromJS({
+      entries: ['Trainspotting']
+    }));
+  });
+
 });
